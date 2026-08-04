@@ -1,0 +1,272 @@
+/*=========================================
+RESPONSIVE.CSS
+=========================================*/
+
+@media(max-width:1200px){
+
+.hero h1{
+font-size:3.6rem;
+}
+
+.hero-content{
+gap:50px;
+}
+
+.section-title h2{
+font-size:2.6rem;
+}
+
+.brands-grid{
+grid-template-columns:repeat(4,1fr);
+}
+
+.tools-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.business-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.resources-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.benefits-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.blog-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.footer-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:992px){
+
+section{
+padding:90px 0;
+}
+
+.hero{
+padding-top:150px;
+}
+
+.hero-content{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.hero-left{
+order:2;
+}
+
+.hero-right{
+order:1;
+}
+
+.hero-buttons{
+justify-content:center;
+}
+
+.hero-numbers{
+justify-content:center;
+}
+
+.hero p{
+margin:auto;
+margin-bottom:40px;
+}
+
+.hero-image img{
+max-width:500px;
+}
+
+.navbar{
+position:fixed;
+top:82px;
+left:-100%;
+width:100%;
+height:calc(100vh - 82px);
+background:#050816;
+transition:.35s;
+padding:40px;
+}
+
+.navbar.active{
+left:0;
+}
+
+.navbar ul{
+flex-direction:column;
+gap:25px;
+}
+
+.menu-mobile{
+display:block;
+}
+
+.header-buttons .btn-primary{
+display:none;
+}
+
+.newsletter form{
+flex-direction:column;
+}
+
+.newsletter button{
+width:100%;
+}
+
+.recommended-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:768px){
+
+.container{
+width:calc(100% - 30px);
+}
+
+.hero h1{
+font-size:2.9rem;
+}
+
+.section-title h2{
+font-size:2.2rem;
+}
+
+.section-title p{
+font-size:1rem;
+}
+
+.brands-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.benefits-grid{
+grid-template-columns:1fr;
+}
+
+.business-grid{
+grid-template-columns:1fr;
+}
+
+.tools-grid{
+grid-template-columns:1fr;
+}
+
+.resources-grid{
+grid-template-columns:1fr;
+}
+
+.blog-grid{
+grid-template-columns:1fr;
+}
+
+.footer-grid{
+grid-template-columns:1fr;
+}
+
+.newsletter-box{
+padding:40px 25px;
+}
+
+.newsletter-box h2{
+font-size:2rem;
+}
+
+.footer-bottom{
+flex-direction:column;
+text-align:center;
+}
+
+.number-card{
+min-width:100%;
+}
+
+.hero-buttons{
+flex-direction:column;
+}
+
+.btn-primary,
+.btn-secondary{
+width:100%;
+}
+
+}
+
+@media(max-width:576px){
+
+.header .container{
+height:72px;
+}
+
+.logo{
+font-size:1.4rem;
+}
+
+.hero{
+padding-top:120px;
+}
+
+.hero h1{
+font-size:2.3rem;
+}
+
+.hero p{
+font-size:1rem;
+}
+
+.hero-badge{
+font-size:.8rem;
+}
+
+.section-title span{
+font-size:.8rem;
+}
+
+.section-title h2{
+font-size:1.8rem;
+}
+
+.section-title{
+margin-bottom:50px;
+}
+
+.benefit-card,
+.business-card,
+.tool-card,
+.resource-card,
+.course-card{
+padding:25px;
+}
+
+.post-content{
+padding:25px;
+}
+
+.newsletter-box{
+padding:30px 20px;
+}
+
+.newsletter-box h2{
+font-size:1.7rem;
+}
+
+.newsletter input,
+.newsletter button{
+height:55px;
+}
+
+.post-card img{
+height:200px;
+}
+
+}
