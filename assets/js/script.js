@@ -333,3 +333,72 @@ FINAL
 =========================================*/
 
 });
+/*=========================================
+NEWSLETTER IA BUSINESS
+=========================================*/
+
+const newsletter = document.getElementById("newsletterForm");
+
+if (newsletter) {
+
+newsletter.addEventListener("submit", async function(e){
+
+e.preventDefault();
+
+const botao = document.getElementById("btnEnviar");
+const mensagem = document.getElementById("mensagemNewsletter");
+
+const email = document.getElementById("email").value.trim();
+
+if(email===""){
+
+mensagem.innerHTML="Digite um e-mail.";
+
+return;
+
+}
+
+botao.disabled=true;
+botao.innerHTML="Enviando...";
+
+try{
+
+const resposta = await fetch("https://script.google.com/macros/s/AKfycbwycV0sF98fUkBcDLSL0GBaV0zDWQXwx1vj0P0FL_7HRGx-dGfOFhWWKFeFWcVnchau/exec",{
+
+method:"POST",
+
+headers:{
+"Content-Type":"text/plain;charset=utf-8"
+},
+
+body:JSON.stringify({
+
+email:email,
+
+origem:"Home"
+
+})
+
+});
+
+botao.innerHTML="Receber Conteúdo";
+botao.disabled=false;
+
+mensagem.innerHTML="✅ Cadastro realizado com sucesso!";
+
+newsletter.reset();
+
+}catch(error){
+
+botao.innerHTML="Receber Conteúdo";
+botao.disabled=false;
+
+mensagem.innerHTML="❌ Erro ao enviar. Tente novamente.";
+
+console.error(error);
+
+}
+
+});
+
+}
