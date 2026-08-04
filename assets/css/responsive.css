@@ -270,3 +270,22 @@ height:200px;
 }
 
 }
+/*=========================================
+WHY BUSINESS RESPONSIVO
+=========================================*/
+
+@media(max-width:1200px){
+
+.why-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:768px){
+
+.why-grid{
+grid-template-columns:1fr;
+}
+
+}
