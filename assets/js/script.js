@@ -350,9 +350,11 @@ const mensagem = document.getElementById("mensagemNewsletter");
 
 const email = document.getElementById("email").value.trim();
 
-if(email===""){
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-mensagem.innerHTML="Digite um e-mail.";
+if(!emailRegex.test(email)){
+
+mensagem.innerHTML="❌ Digite um e-mail válido.";
 
 return;
 
@@ -381,12 +383,26 @@ origem:"Home"
 
 });
 
+const resultado = await resposta.json();
+
 botao.innerHTML="Receber Conteúdo";
 botao.disabled=false;
+
+if(resultado.status==="ok"){
 
 mensagem.innerHTML="✅ Cadastro realizado com sucesso!";
 
 newsletter.reset();
+
+}else if(resultado.status==="duplicado"){
+
+mensagem.innerHTML="⚠️ Este e-mail já está cadastrado.";
+
+}else{
+
+mensagem.innerHTML="❌ Não foi possível realizar o cadastro.";
+
+}
 
 }catch(error){
 
